@@ -13,11 +13,22 @@ class MyDrawer extends StatelessWidget {
         // Important: Remove any padding from the ListView.
         padding: EdgeInsets.zero,
         children: [
-          DrawerHeader(
-            decoration: const BoxDecoration(
-              color: Colors.blue,
+          const UserAccountsDrawerHeader(
+            decoration: BoxDecoration(color: Color(0xff00A19B)),
+            accountName: Text(
+              "Pinkesh Darji",
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-            child: Text(title),
+            accountEmail: Text(
+              "pinkesh.earth@gmail.com",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            currentAccountPicture: FlutterLogo(),
           ),
           ListTile(
             leading: const Icon(
