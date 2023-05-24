@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
-import 'package:flutter_app/Pages/SplashPage.dart';
+import 'SplashScreen.dart';
 
 
 /*void main() {
@@ -30,7 +30,8 @@ class MyApp extends StatelessWidget {
       builder: DevicePreview.appBuilder,
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
-      home: const SplashPage(),
+      home: const SplashScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 
