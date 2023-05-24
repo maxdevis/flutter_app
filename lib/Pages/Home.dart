@@ -17,7 +17,7 @@ class SplashScreenState extends State<HomePage> {
         appBar: const MyAppBar( title: 'MyAppBar',),
         //set app bar from appbar.dart
         // use like this where ever you want
-        drawer: myDrawer(),
+        drawer: const MyDrawer(title: 'MyDrawer'),
         //set drawer from app_drawer.dart
         //set like this where ever you want
         body: const Center(

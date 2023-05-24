@@ -1,41 +1,45 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-Widget myDrawer(){
-  return Drawer(
-    child: SingleChildScrollView(
-        child:Container(
-            margin:const EdgeInsets.only(top:50),
-            child:Column(children: <Widget>[
+class MyDrawer extends StatelessWidget {
+  const MyDrawer({super.key, required this.title});
+  final String title;
 
-              ListTile(
-                  leading:const Icon(Icons.home),
-                  title:const Text("Home"),
-                  onTap:(){
-                    // Home button action
-                  }
-              ),
 
-              ListTile(
-                  leading:const Icon(Icons.person),
-                  title:const Text("My Profile"),
-                  onTap:(){
-                    // My Pfofile button action
-                  }
-              ),
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      child: ListView(
+        // Important: Remove any padding from the ListView.
+        padding: EdgeInsets.zero,
+        children: [
+          DrawerHeader(
+            decoration: const BoxDecoration(
+              color: Colors.blue,
+            ),
+            child: Text(title),
+          ),
+          ListTile(
+            leading: const Icon(
+              Icons.home,
+            ),
+            title: const Text('Page 1'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            leading: const Icon(
+              Icons.train,
+            ),
+            title: const Text('Page 2'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+        ],
+      ),
+    );
+  }
 
-              ListTile(
-                  leading:const Icon(Icons.search),
-                  title:const Text("Find Peoples"),
-                  onTap:(){
-                    // Find peoples button action
-                  }
-              )
-
-              //add more drawer menu here
-
-            ],)
-        )
-    ),
-  );
 }
