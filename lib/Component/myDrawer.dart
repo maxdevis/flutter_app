@@ -8,6 +8,7 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      width: MediaQuery.of(context).size.width * 0.5,
       child: ListView(
         // Important: Remove any padding from the ListView.
         padding: EdgeInsets.zero,
@@ -38,7 +39,7 @@ class MyDrawer extends StatelessWidget {
             ),
             title: const Text('Home'),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.of(context).pushReplacementNamed('/home');
             },
           ),
           ListTile(
@@ -47,7 +48,7 @@ class MyDrawer extends StatelessWidget {
             ),
             title: const Text('Page 2'),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.of(context).pushReplacementNamed('/second');
             },
           ),
         ],
