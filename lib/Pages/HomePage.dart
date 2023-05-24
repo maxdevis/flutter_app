@@ -4,7 +4,6 @@ import 'SecondPage.dart';
 class HomePage extends StatelessWidget {
   const HomePage({Key? key, required this.title}) : super(key: key);
   final String title;
-  //xx
 
   @override
   Widget build(BuildContext context) {
