@@ -5,7 +5,6 @@ class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key, required this.title});
   final String title;
 
-
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -28,13 +27,16 @@ class MyDrawer extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            currentAccountPicture: FlutterLogo(),
+            currentAccountPicture: Image(
+              image: AssetImage('assets/images/doctor.png'),
+              fit: BoxFit.fitHeight,
+            ),
           ),
           ListTile(
             leading: const Icon(
               Icons.home,
             ),
-            title: const Text('Page 1'),
+            title: const Text('Home'),
             onTap: () {
               Navigator.pop(context);
             },
