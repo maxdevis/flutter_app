@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/Pages/Home.dart';
+import 'package:flutter_app/Pages/Login.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -33,7 +34,7 @@ class SplashState extends State<SplashScreen> {
 
   route() {
     Navigator.pushReplacement(context, MaterialPageRoute(
-        builder: (context) => const HomePage()
+        builder: (context) => const LoginPage(title: 'Login')
     )
     );
   }

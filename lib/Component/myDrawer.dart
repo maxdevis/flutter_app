@@ -46,9 +46,18 @@ class MyDrawer extends StatelessWidget {
             leading: const Icon(
               Icons.train,
             ),
-            title: const Text('Page 2'),
+            title: const Text('Second page'),
             onTap: () {
               Navigator.of(context).pushReplacementNamed('/second');
+            },
+          ),
+          ListTile(
+            leading: const Icon(
+              Icons.login,
+            ),
+            title: const Text('Login'),
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed('/login');
             },
           ),
         ],
